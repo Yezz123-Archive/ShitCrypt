@@ -29,4 +29,4 @@ Also he show me a Quick fix like installing VCPKG and i do it and nothing work.
 
 - Use Library that are in [ShitCrypt/include](https://github.com/yezz123/ShitCrypt/tree/main/include)
 
-- Or this QST https://stackoverflow.com/questions/65789957/include-errors-detected-linux/65790393#65790393
+- Or this QST https://stackoverflow.com/questions/65789957/include-errors-detected-linux

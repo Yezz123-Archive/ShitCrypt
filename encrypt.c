@@ -67,11 +67,11 @@ void encrypt(gcry_sexp_t *kp){
     fseek(fp, 0, SEEK_SET);
     
     char *pt_buf = malloc(512 / 8 * 1024);
-    memset(pt_buf, 0, 512 / 8 * 1024);
     if(pt_buf == NULL){
         printf("failed to allocate the space to store the plaintext.\n");
         exit(1);
     }
+    memset(pt_buf, 0, 512 / 8 * 1024);
     fread(pt_buf, 1, file_len, fp);
     fclose(fp);
 

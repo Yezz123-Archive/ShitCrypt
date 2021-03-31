@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://github.com/yezz123/yezz123/blob/master/img/img.gif">
-</p>
-
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
@@ -22,12 +18,20 @@ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
 I work on a crypt and decrypt tool and i got an error about library :
 ```C
-#include <gcrypt.h>
+#include <include/gpg-error.h>
+#include <include/gcrypt.h>
+#include <include/gcrypt-module.h>
 ```
-all the other library without errors just this one and when i peek the problem he show me this :
 ```C
-#include errors detected. Please update your includePath. Squiggles are disabled for this translation unit.C/C++(1696)
-cannot open source file "gpg-error.h" (dependency of "gcrypt.h")C/C++(1696)
+Generating the key...
+keygen.c:4:10: fatal error: include/gpg-error.h: No such file or directory
+    4 | #include <include/gpg-error.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+encrypt.c:4:10: fatal error: include/gpg-error.h: No such file or directory
+    4 | #include <include/gpg-error.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
 ```
 Also he show me a Quick fix like installing VCPKG and i do it and nothing work.
 

@@ -1,5 +1,5 @@
 # build an executable named  from encrypt.c
-  all: encrypt.c
+  all: .encrypt.c
  	  gcc -g -Wall -o encrypt encrypt.c
 
   clean: 

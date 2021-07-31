@@ -1,6 +1,5 @@
 from subprocess import call
 import random
-import math
 
 # define isQR
 
@@ -28,9 +27,9 @@ def findQR(p):
 
 # Generate the key from Keygen.c
 print("Generating the key...")
-call(["gcc", "-o", "keygen", "keygen.c", "-lgcrypt"])
-call(["gcc", "-o", "encrypt", "encrypt.c", "-lgcrypt"])
-call("./keygen")
+call(["gcc", "-o", "keygen", "key/keygen.c", "-lgcrypt"])
+call(["gcc", "-o", "encrypt", "key/encrypt.c", "-lgcrypt"])
+call("key/keygen")
 
 p = int(open("./p").read(), 16)
 y = int(open("./y").read(), 16)
@@ -54,7 +53,7 @@ for i in range(runs):
     challenge_string = challenge_string.upper()
     open("./pt", "wb").write(challenge_string)
 
-    call("./encrypt")
+    call("key/encrypt")
     ct_a = int(open("./ct_a").read(), 16)
     ct_b = int(open("./ct_b").read(), 16)
 

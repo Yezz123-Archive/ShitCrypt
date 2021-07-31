@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "gpg-error.h": "c",
-        "gcrypt.h": "c",
-        "gcrypt-module.h": "c"
-    }
-}
